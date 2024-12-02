@@ -52,7 +52,7 @@ void loop() {
   if (WiFi.status() == WL_CONNECTED) {
     // Read sensor values
     float voltage = analogRead(voltagePin) * (3.3 / 4095.0); // Convert to voltage
-    float current = analogRead(currentPin) * (3.3 / 4095.0); // Convert to current
+    float current = (analogRead(currentPin) * (3.3 / 4095.0)+0.3) / 0.185;
     float light = analogRead(lightPin) * (3.3 / 4095.0);     // Convert to light intensity
     float temperature = dht.readTemperature();  // Read temperature
     float humidity = dht.readHumidity(); // Read humidity
