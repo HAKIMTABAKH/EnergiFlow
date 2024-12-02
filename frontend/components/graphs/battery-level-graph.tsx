@@ -42,7 +42,7 @@ export function BatteryLevelGraph() {
   return (
     <Card className="p-6">
       <h2 className="text-xl font-semibold mb-4 text-light-text dark:text-dark-text">
-        Battery Level
+        Light Degree
       </h2>
       <div className="h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
